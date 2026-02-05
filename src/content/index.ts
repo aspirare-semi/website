@@ -3,8 +3,7 @@ const placeholder = [
 ]
 
 const alphaBody = [
-  'Our first generation AI accelerator brings our innovative analog compute cores to data center applications. The Aspirare Semi Gen 1 provides up to 2x higher performance at ~10x reduction in energy consumption compared to market standard solutions.',
-  'Aspirare Semi’s driver and software stack is plug and play with the most common ML frameworks, ensuring AI/ML developers and data scientists can leverage Aspirare Semi compute with minimal code changes and performance impacts.'
+  'Our first generation AI chip brings our innovative analog compute cores to edge applications. The Aspirare Semi Gen 1 provides up to 2x higher performance at 10x reduction in energy consumption compared to traditional solutions.'
 ]
 
 const betaBody = [
@@ -18,8 +17,8 @@ const edgeBody = [
 export const hero = {
   title: 'Sustainably empowering the AI enabled future.',
   body: [
-    'What will the AI enabled future look like? Current AI developments are constrained by two major factors - compute capability and the energy required to run current generation AI computing hardware.',
-    'Aspirare Semi aims to empower the next generation of AI with our power efficient AI compute hardware. With edge and data center deployment applications, our products bring next-generation computing to the forefront of the AI future.'
+    'AI developments are constrained by two major factors - compute and energy.',
+    'Aspirare Semi aims to empower the next generation of AI with our power efficient AI compute hardware. With the future explosive growth of edge applications, our product brings next-generation computing to the forefront of the AI future.'
   ]
 }
 
@@ -44,7 +43,7 @@ export const products = {
 export const about = {
   title: 'about',
   body: [
-    'Aspirare is the Latin form of “to aspire” and “to breathe in”. Our mission is to breathe life into the next evolution of AI developments and applications. Our innovative approach removes the energy consumption and thermal constraints in place with current generation designs, empowering the potential of high-performance compute from data center to edge.'
+    'Our mission is to breathe life into the next evolution computing to optimize energy efficiency for AI. Our innovative approach removes the energy consumption and thermal constraints in place with current generation designs, empowering the potential of high-performance compute as AI continues to scale.'
   ]
 }
 
