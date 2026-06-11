@@ -11,7 +11,7 @@ const edgeBody = [
 ]
 
 export const hero = {
-  title: 'Sustainably empowering the AI enabled future.',
+  title: 'Sustainably powering the AI enabled future',
   body: [
     'AI developments are constrained by two major factors - compute and energy.',
     'Aspirare Semi aims to empower the next generation of AI with our power efficient AI compute hardware. With the future explosive growth of edge applications, our product brings next-generation computing to the forefront of the AI future.'
@@ -47,7 +47,7 @@ export const homeRows = [
   {
     label: 'What we offer',
     items: [
-      'Aspirare Semi Gen 1: our first generation AI chip brings our innovative analog compute cores to edge applications.',
+      'Our first gen AI chip brings our innovative analog compute cores to edge applications.',
       'Up to 2x higher performance at 10x reduction in energy consumption compared to traditional solutions.',
       'An analog architecture uniquely suited for small form factor applications, reducing supporting battery and cooling requirements.'
     ]
@@ -55,8 +55,8 @@ export const homeRows = [
   {
     label: 'Target workloads',
     items: [
-      'AI inference at the edge: wearables, mobile, and IoT devices where on-device, low-latency processing is critical.',
-      'Power and thermally constrained applications where data center quality AI compute is needed directly on device.',
+      'AI inference at the edge: wearables, IoT, and robotics where on-device, low-latency processing is critical.',
+      'Power and thermally constrained applications where high performance AI compute is needed directly on device.',
       'Energy efficient AI compute as models continue to scale.'
     ]
   },
