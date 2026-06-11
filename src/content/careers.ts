@@ -3,7 +3,8 @@ import { email } from './global'
 export const careers = {
   title: 'Careers',
   body: [
-    'Aspirare Semi is a rapidly growing Canadian startup building a world-class team to advance the development of our vision of creating a sustainable AI computing solution. If you’re interested in joining our ambition to empower the AI enabled future, please reach out to us or view the current job postings at the link below.'
+    'Aspirare Semi is a growing Canadian chip company built by a world-class team to advance our vision of creating a sustainable AI computing solution. Our work spans the entire range from hardware silicon to software ML models.',
+    'If you’re interested in joining our aspiration to empower the AI enabled future, reach out to us to connect.'
   ],
   positions: {
     text: 'Inquire about open positions',
