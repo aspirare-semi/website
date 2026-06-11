@@ -11,7 +11,6 @@ export const careers = {
   }
 }
 
-// Draft values adapted from matx.com/jobs — to be edited and fine tuned.
 export const values = {
   title: 'Our values',
   items: [

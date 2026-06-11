@@ -43,8 +43,6 @@ export const about = {
   ]
 }
 
-// Home page rows, styled after matx.com. "Target workloads" and "Investors"
-// hold sample placeholder content until real content is provided.
 export const homeRows = [
   {
     label: 'What we offer',

@@ -1,6 +1,3 @@
-// Sample placeholder content — to be replaced with real announcements and
-// research publications.
-
 export const announcements = {
   title: 'News',
   items: [
@@ -21,7 +18,8 @@ export const research = {
   title: 'Research',
   items: [
     {
-      title: 'Analog multiply-accumulate cores for energy-efficient AI inference',
+      title:
+        'Analog multiply-accumulate cores for energy-efficient AI inference',
       date: 'Feb 2026',
       body: 'An overview of our analog compute core architecture and how it reduces energy consumption for matrix multiplication workloads at the edge.'
     },

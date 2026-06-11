@@ -55,8 +55,34 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/'
             }
           </ul>
         </nav>
+        <button
+          class='mobile-menu-toggle'
+          aria-label='Toggle menu'
+          aria-expanded='false'
+        >
+          <div class='hamburger'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
       </div>
     </header>
+
+    <div class='mobile-menu-overlay'>
+      <div class='mobile-menu-content'>
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.url}
+              aria-current={currentPath === link.url ? 'page' : undefined}
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </div>
+    </div>
 
     <slot />
 
@@ -74,5 +100,24 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/'
         </ul>
       </div>
     </footer>
+
+    <script>
+      const toggle = document.querySelector('.mobile-menu-toggle')
+      const overlay = document.querySelector('.mobile-menu-overlay')
+
+      function closeMenu() {
+        overlay?.classList.remove('active')
+        toggle?.setAttribute('aria-expanded', 'false')
+        document.body.classList.remove('menu-open')
+      }
+
+      toggle?.addEventListener('click', () => {
+        const isOpen = overlay?.classList.toggle('active') ?? false
+        toggle.setAttribute('aria-expanded', `${isOpen}`)
+        document.body.classList.toggle('menu-open', isOpen)
+      })
+
+      overlay?.addEventListener('click', closeMenu)
+    </script>
   </body>
 </html>
