@@ -1,20 +1,8 @@
 ---
-import { Image } from 'astro:assets'
-import textureBg from '../assets/images/hero-bg.png'
 import '../styles/layout.css'
 
-import {
-  email,
-  navLinks,
-  toc,
-  copyright
-} from '../content/global'
-import { isTypeOnlyExportDeclaration } from 'typescript'
+import { navLinks, footerLinks, copyright } from '../content/global'
 
-const { default: rightArrowHtml } = await import(
-  `../assets/svg/right-arrow.svg?raw`
-)
-const { default: menuButtonHtml } = await import(`../assets/svg/menu.svg?raw`)
 const { default: aspirareLogoHtml } = await import(
   `../assets/svg/aspirareLogo.svg?raw`
 )
@@ -24,6 +12,7 @@ interface Props {
 }
 
 const { title } = Astro.props
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/'
 ---
 
 <!doctype html>
@@ -36,7 +25,7 @@ const { title } = Astro.props
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <link
-      href='https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Playfair+Display:wght@800&family=Roboto+Mono:wght@400;700&display=swap'
+      href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'
       rel='stylesheet'
     />
     <meta name='generator' content={Astro.generator} />
@@ -44,84 +33,46 @@ const { title } = Astro.props
   </head>
   <body>
     <header>
-      <nav>
-        <Image id='nav-bg' src={textureBg} aria-hidden alt='Texture image' />
-        <div class='container navbar-container'>
-          <div class='navbar-head'>
-            <a href='/#' title='Aspirare'>
-              <Fragment set:html={aspirareLogoHtml} />
-            </a>
-
-            <button
-              id='toggleMenu'
-              class='menuButton'
-              title='Open Navigation Menu'
-              aria-expanded='false'
-            >
-              <Fragment set:html={menuButtonHtml} />
-            </button>
-          </div>
-          <ul class='container'>
+      <div class='container header-inner'>
+        <a class='logo' href='/' title='Aspirare Semi'>
+          <Fragment set:html={aspirareLogoHtml} />
+        </a>
+        <nav>
+          <ul>
             {
               navLinks.map((link) => (
                 <li>
-                  <a href={link.url}>{link.text}</a>
+                  <a
+                    href={link.url}
+                    aria-current={
+                      currentPath === link.url ? 'page' : undefined
+                    }
+                  >
+                    {link.text}
+                  </a>
                 </li>
               ))
             }
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <slot />
+
     <footer>
-      <div class='container'>
-        <Fragment set:html={aspirareLogoHtml} />
-        <a href={toc.url}>{toc.text}</a>
+      <div class='container footer-inner'>
         <div>{copyright}</div>
+        <ul>
+          {
+            footerLinks.map((link) => (
+              <li>
+                <a href={link.url}>{link.text}</a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </footer>
-
-    <script>
-      const toggleMenuButton = document.querySelector('#toggleMenu')
-
-      function toggleMenu() {
-        const expanded =
-          toggleMenuButton?.getAttribute('aria-expanded') === 'true' || false
-        const newExpandedState = !expanded
-        toggleMenuButton?.setAttribute('aria-expanded', `${newExpandedState}`)
-
-        const nav = document.querySelector('nav')
-        if (nav) {
-          if (nav.getAttribute('open')) {
-            nav.removeAttribute('open')
-          } else {
-            nav.setAttribute('open', 'true')
-          }
-        }
-
-        const menu = toggleMenuButton?.nextElementSibling
-        if (menu) {
-          if (menu.getAttribute('hidden')) {
-            menu.removeAttribute('hidden')
-          } else {
-            menu.setAttribute('hidden', 'true')
-          }
-        }
-
-        const menuLinks = document.querySelectorAll('nav a')
-
-        menuLinks.forEach((link) => {
-          if (newExpandedState) {
-            link.addEventListener('click', toggleMenu)
-          } else {
-            link.removeEventListener('click', toggleMenu)
-          }
-        })
-      }
-
-      toggleMenuButton?.addEventListener('click', toggleMenu)
-    </script>
   </body>
 </html>

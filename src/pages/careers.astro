@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import { careers, values } from '../content/careers'
+---
+
+<Layout title='Careers | Aspirare Semi'>
+  <main>
+    <div class='container'>
+      <section id='careers'>
+        <h1>{careers.title}</h1>
+        {careers.body.map((text) => <p>{text}</p>)}
+        <p class='positions'>
+          <a href={careers.positions.url}>{careers.positions.text}</a>
+        </p>
+      </section>
+
+      <section id='values'>
+        <span class='section-label'>{values.title}</span>
+        <div class='values-grid'>
+          {
+            values.items.map((item) => (
+              <div class='value-card'>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .positions {
+    margin-top: 2rem;
+  }
+
+  #values {
+    margin-top: 4.5rem;
+  }
+
+  .section-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    border-top: 1px solid var(--text-muted);
+    padding-top: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .value-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .value-card h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .value-card p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .values-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 2.5rem;
+    }
+  }
+</style>

@@ -1,10 +1,13 @@
 export const email = 'josh@aspirare.io'
+
 export const navLinks = [
-  { url: '/#products', text: 'product' },
-  { url: '/#about', text: 'about' },
-  { url: '/#about', text: 'careers' },
-  // { url: '/#news', text: 'news' },
-  { url: '/#contact', text: 'contact' }
+  { url: '/', text: 'Company' },
+  { url: '/research', text: 'Research' },
+  { url: '/careers', text: 'Careers' }
 ]
-export const toc = { url: '/terms-conditions', text: 'Terms & Conditions' }
-export const copyright = 'copyright aspirare semi 2026'
+
+export const footerLinks = [
+  { url: `mailto:${email}`, text: 'Contact' }
+]
+
+export const copyright = '© 2026 Aspirare Semi'

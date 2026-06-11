@@ -1,7 +1,3 @@
-const placeholder = [
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-]
-
 const alphaBody = [
   'Our first generation AI chip brings our innovative analog compute cores to edge applications. The Aspirare Semi Gen 1 provides up to 2x higher performance at 10x reduction in energy consumption compared to traditional solutions.'
 ]
@@ -27,36 +23,52 @@ export const products = {
   productCards: [
     {
       title: 'Aspirare Semi Gen 1',
-      body: alphaBody // placeholder
-    },
+      body: alphaBody
+    }
     // {
     //   title: 'Aspirare Semi Gen 2',
-    //   body: betaBody // placeholder
+    //   body: betaBody
     // },
     // {
     //   title: 'Aspirare Semi Edge',
-    //   body: edgeBody // placeholder
+    //   body: edgeBody
     // }
   ]
 }
 
 export const about = {
-  title: 'about',
+  title: 'About',
   body: [
     'Our mission is to breathe life into the next evolution computing to optimize energy efficiency for AI. Our innovative approach removes the energy consumption and thermal constraints in place with current generation designs, empowering the potential of high-performance compute as AI continues to scale.'
   ]
 }
 
-export const careers = {
-  title: 'Careers',
-  body: [
-    'Aspirare Semi is a rapidly growing Canadian startup building a world-class team to advance the development of our vision of creating a sustainable AI computing solution. If you’re interested in joining our ambition to empower the AI enabled future, please reach out to us or view the current job postings at the link below.'
-  ],
-  positions: {
-    text: 'Inquire about open positions',
-    url: 'mailto:josh@aspirare.io'
+// Home page rows, styled after matx.com. "Target workloads" and "Investors"
+// hold sample placeholder content until real content is provided.
+export const homeRows = [
+  {
+    label: 'What we offer',
+    items: [
+      'Aspirare Semi Gen 1: our first generation AI chip brings our innovative analog compute cores to edge applications.',
+      'Up to 2x higher performance at 10x reduction in energy consumption compared to traditional solutions.',
+      'An analog architecture uniquely suited for small form factor applications, reducing supporting battery and cooling requirements.'
+    ]
+  },
+  {
+    label: 'Target workloads',
+    items: [
+      'AI inference at the edge: wearables, mobile, and IoT devices where on-device, low-latency processing is critical.',
+      'Power and thermally constrained applications where data center quality AI compute is needed directly on device.',
+      'Energy efficient AI compute as models continue to scale.'
+    ]
+  },
+  {
+    label: 'Investors',
+    body: [
+      'Aspirare Semi is a member of ventureLAB, a leading global founder community for hardware technology and enterprise software companies in Canada. For investment inquiries, please contact us.'
+    ]
   }
-}
+]
 
 export const news = {
   title: 'News',
@@ -73,12 +85,5 @@ export const news = {
       title: 'Aspirare Semi completes prototype chip',
       body: 'Aspirare Semi successfully taped out its first analog multiply engine chip to address AI workloads.'
     }
-  ]
-}
-
-export const contact = {
-  title: 'Contact',
-  body: [
-    'For any inquiries about Aspirare Semi, please reach us below:'
   ]
 }
