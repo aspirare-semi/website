@@ -47,7 +47,7 @@ export const homeRows = [
   {
     label: 'What we offer',
     items: [
-      'Our first gen AI chip brings our innovative analog compute cores to edge applications.',
+      'Our AI chip brings our innovative analog compute cores to edge applications.',
       'Up to 2x higher performance at 10x reduction in energy consumption compared to traditional solutions.',
       'An analog architecture uniquely suited for small form factor applications, reducing supporting battery and cooling requirements.'
     ]
