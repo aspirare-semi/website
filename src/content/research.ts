@@ -23,11 +23,6 @@ export const research = {
       body: 'How model accuracy holds up when inference runs through analog compute paths, with benchmark results across common edge AI workloads.'
     },
     {
-      title: 'Thermal characteristics of analog compute at small form factors',
-      date: 'Sept 2025',
-      body: 'Measurements and analysis of thermal dissipation in our prototype silicon, and the implications for IoT and wearable devices.'
-    },
-    {
       title:
         'Analog multiply-accumulate cores for energy-efficient AI inference',
       date: 'Feb 2023',
